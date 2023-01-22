@@ -69,6 +69,7 @@ func (s *IntegrationTestSuite) runInitialNode() {
 		".",
 		map[string]string{"INITIAL_VERSION": s.upgradeParams.InitialVersion},
 	)
+	
 	s.Require().NoError(err, "can't build initial container")
 
 	node := upgrade.NewNode(localRepository, s.upgradeParams.InitialVersion)
