@@ -22,6 +22,7 @@ export function convertToFixedDecimals(amount: number | string): string {
   if (typeof amount === 'string') {
     amount = Number(amount)
   }
+  
   if (amount > 0.01) {
     return amount.toFixed(2)
   } else return String(amount)
